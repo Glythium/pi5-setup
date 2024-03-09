@@ -1,10 +1,13 @@
 #!/bin/bash
 
-# Install dependencies
-sudo apt-get update -y
+# Install Docker
+curl -fsSL https://get.docker.com -o ./get-docker.sh
+sudo sh ./get-docker.sh
+rm ./get-docker.sh
+
+# Install personal dependencies
 sudo apt-get install \
   vim \
-  docker.io \
   -y
 
 # Place files where they need to go
